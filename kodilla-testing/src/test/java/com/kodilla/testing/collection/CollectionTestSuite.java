@@ -13,9 +13,9 @@ public class CollectionTestSuite {
         ArrayList<Integer> emptyList = new ArrayList<Integer>();
         OddNumbersExterminator numbersList = new OddNumbersExterminator();
         //When
-        Integer result = numbersList.exterminate(emptyList);
+        ArrayList<Integer> result = numbersList.exterminate(emptyList);
         //Then
-        Assert.assertTrue(result % 2 == 0);
+        Assert.assertTrue(result.isEmpty());
     }
 
 
@@ -33,9 +33,14 @@ public class CollectionTestSuite {
         normalList.add(22);
         OddNumbersExterminator numbersList = new OddNumbersExterminator();
         //When
-        Integer result = numbersList.exterminate(normalList);
+        ArrayList<Integer> result = numbersList.exterminate(normalList);
         //Then
-        Assert.assertTrue(result % 2 ==0);
+        Assert.assertTrue(result.size() == 5);
+        Assert.assertEquals(10, result.get(0).intValue());
+        Assert.assertEquals(12, result.get(1).intValue());
+        Assert.assertEquals(6, result.get(2).intValue());
+        Assert.assertEquals(8, result.get(3).intValue());
+        Assert.assertEquals(22, result.get(4).intValue());
 
     }
 }

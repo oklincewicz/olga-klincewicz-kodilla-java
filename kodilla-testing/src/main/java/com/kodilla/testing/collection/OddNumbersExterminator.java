@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class OddNumbersExterminator {
 
-    public Integer exterminate(ArrayList<Integer> numbers) {
+    public ArrayList<Integer> exterminate(ArrayList<Integer> numbers) {
 
         ArrayList<Integer> evenNumbers = new ArrayList<Integer>();
 
@@ -16,8 +16,7 @@ public class OddNumbersExterminator {
                     evenNumbers.add(temporaryValue);
                 }
             }
-            System.out.println("List is empty");
         }
-        return null;
+        return evenNumbers;
     }
 }
