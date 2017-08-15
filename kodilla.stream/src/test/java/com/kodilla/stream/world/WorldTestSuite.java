@@ -13,31 +13,43 @@ public class WorldTestSuite {
         //Given
         Set<Continent> continents = new HashSet<>();
         Set<Country> countriesEurope = new HashSet<>();
-        World world = new World(continents);
+        Set<Country> countriesSouthAmerica = new HashSet<>();
+        Set<Country> countriesAsia = new HashSet<>();
 
-        Country poland = new Country("Poland", new BigDecimal("100"));
-        Country france = new Country("France", new BigDecimal("200"));
+        Country poland = new Country("Poland", new BigDecimal("38432992"));
+        Country france = new Country("France", new BigDecimal("66318000"));
+        Country uk = new Country("UK", new BigDecimal("65110000"));
         countriesEurope.add(poland);
         countriesEurope.add(france);
+        countriesEurope.add(uk);
+
+        Country chile = new Country("Chile", new BigDecimal("18096847"));
+        Country brasil = new Country("Brasil", new BigDecimal("207848000"));
+        Country columbia = new Country("Columbia", new BigDecimal("48229000"));
+        countriesSouthAmerica.add(chile);
+        countriesSouthAmerica.add(brasil);
+        countriesSouthAmerica.add(columbia);
+
+        Country china = new Country("China", new BigDecimal("1360720000"));
+        Country japan = new Country("Japan", new BigDecimal("127110047"));
+        Country southKorea = new Country("South Korea", new BigDecimal("50801405"));
+        Country thailand = new Country("Thailand", new BigDecimal("67091089"));
+        countriesAsia.add(china);
+        countriesAsia.add(japan);
+        countriesAsia.add(southKorea);
+        countriesAsia.add(thailand);
 
         continents.add(new Continent("Europe", countriesEurope));
+        continents.add(new Continent("South America", countriesSouthAmerica));
+        continents.add(new Continent("Asia", countriesAsia));
 
-
-//        continents.add(new Continent("Europe", (new Country("UK", new BigDecimal("65110000")))));
-//        continents.add(new Continent("South America", (new Country("Chile", new BigDecimal("18096847")))));
-//        continents.add(new Continent("South America", (new Country("Brasil", new BigDecimal("207848000")))));
-//        continents.add(new Continent("South America", (new Country("Columbia", new BigDecimal("48229000")))));
-//        continents.add(new Continent("Asia", (new Country("China", new BigDecimal("1360720000")))));
-//        continents.add(new Continent("Asia", (new Country("Japan", new BigDecimal("127110047")))));
-//        continents.add(new Continent("Asia", (new Country("South Korea", new BigDecimal("50801405")))));
-//        continents.add(new Continent("Asia", (new Country("Thailand", new BigDecimal("67091089")))));
-
+        World world = new World(continents);
 
         //When
         BigDecimal totalPeople = world.getPeopleQuantity();
 
         //Then
-        BigDecimal expectedPeople = new BigDecimal("300");
+        BigDecimal expectedPeople = new BigDecimal("2049757380");
         Assert.assertEquals(expectedPeople, totalPeople);
     }
 }

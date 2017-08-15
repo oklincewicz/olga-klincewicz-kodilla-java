@@ -146,10 +146,8 @@ public class BoardTestSuit {
         Board project = prepareTestData();
 
         //When
-        List<TaskList> inProgressTasks = new ArrayList<>();
-        inProgressTasks.add(new TaskList("In progress"));
         double averageTime = project.getTaskLists().stream()
-                .filter(inProgressTasks::contains)
+                .filter(x -> x.getName().equals("In progress"))
                 .flatMap(tl -> tl.getTasks().stream())
                 .map(x -> x.getCreated())
                 .map(x -> DAYS.between(x, LocalDate.now()))
@@ -157,9 +155,33 @@ public class BoardTestSuit {
                 .average().orElse(0);
 
         //Then
-
         Assert.assertEquals(10, averageTime, 0.1);
 
+    }
 
+    @Test
+    public void testAddTaskListAverageWorkingOnTaskWithSumAndCount() {
+        //Given
+        Board project = prepareTestData();
+
+        //When
+        double sumTime = project.getTaskLists().stream()
+                .filter(x -> x.getName().equals("To do"))
+                .flatMap(tl -> tl.getTasks().stream())
+                .map(x -> x.getCreated())
+                .map(x -> DAYS.between(x, LocalDate.now()))
+                .mapToDouble(x -> x)
+                .sum();
+        double countTime = project.getTaskLists().stream()
+                .filter(x -> x.getName().equals("To do"))
+                .flatMap(x -> x.getTasks().stream())
+                .map(x -> x.getCreated())
+                .map(x -> DAYS.between(x, LocalDate.now()))
+                .mapToDouble(x -> x)
+                .count();
+
+
+        //Then
+        Assert.assertEquals(20, sumTime / countTime, 0.1);
     }
 }
