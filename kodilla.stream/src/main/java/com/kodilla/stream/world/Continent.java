@@ -5,17 +5,12 @@ import java.util.Set;
 
 public final class Continent {
 
-    private final Set<Country> countries = new HashSet<>();
-    private final Country country;
+    private final Set<Country> countries;
     private final String continentName;
 
-    public Continent(final String continentName, final Country country) {
+    public Continent(String continentName, Set<Country> countries ) {
         this.continentName = continentName;
-        this.country = country;
-    }
-
-    public Country getCountry() {
-        return country;
+        this.countries = countries;
     }
 
     public String getContinentName() {
@@ -23,7 +18,7 @@ public final class Continent {
     }
 
    public Set<Country> getCountries() {
-       return countries;
+       return new HashSet<>(countries);
     }
 
 }
