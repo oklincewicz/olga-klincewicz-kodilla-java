@@ -25,16 +25,18 @@ public class FlightSearch {
 
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws RouteNotFoundException {
 
         Flight flight = new Flight("Warsaw", "Paris");
         FlightSearch flightSearch = new FlightSearch();
 
-        try {
-            flightSearch.findFilght(flight);
-        } catch (RouteNotFoundException e) {
-            System.out.println("Please select another destination for your flight");
-        }
+        flightSearch.findFilght(flight);
+
+//        try {
+//            flightSearch.findFilght(flight);
+//        } catch (RouteNotFoundException e) {
+//            System.out.println("Please select another destination for your flight");
+//        }
 
 
     }
