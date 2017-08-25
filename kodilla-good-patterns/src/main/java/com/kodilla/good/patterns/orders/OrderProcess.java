@@ -17,7 +17,7 @@ public class OrderProcess {
 
 
     public OrderDto process(final OrderRequest orderRequest) {
-        boolean isOrder = orderServices.createOrder(OrderRequest.getUser(), OrderRequest.getProduct(),
+        boolean isOrder = orderServices.createOrder(orderRequest.getUser(), orderRequest.getProduct(),
                 orderRequest.getDealer());
 
         if(isOrder) {

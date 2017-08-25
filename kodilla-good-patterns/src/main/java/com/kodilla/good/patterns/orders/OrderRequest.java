@@ -2,8 +2,8 @@ package com.kodilla.good.patterns.orders;
 
 public class OrderRequest {
 
-    private static User user;
-    private static Product product;
+    private final User user;
+    private final Product product;
     private final Dealer dealer;
 
     public OrderRequest(final User user, final Product product, final Dealer dealer) {
@@ -12,11 +12,11 @@ public class OrderRequest {
         this.dealer = dealer;
     }
 
-    public static User getUser() {
+    public User getUser() {
         return user;
     }
 
-    public static Product getProduct() {
+    public Product getProduct() {
         return product;
     }
 

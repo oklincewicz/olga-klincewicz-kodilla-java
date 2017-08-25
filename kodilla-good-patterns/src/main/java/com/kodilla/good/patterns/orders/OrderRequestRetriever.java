@@ -1,6 +1,6 @@
 package com.kodilla.good.patterns.orders;
 
-public class OrderRequestRetriver {
+public class OrderRequestRetriever {
 
     public OrderRequest retriver() {
         User user = new User("Ala Nowak", 98234449, "ala.nowak@ala.pl");
