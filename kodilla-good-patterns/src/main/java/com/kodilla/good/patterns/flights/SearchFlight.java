@@ -9,11 +9,11 @@ import java.util.stream.Collectors;
 
 public class SearchFlight {
 
-    Flight flight;
+    FlightList flightList = new FlightList();
 
     public List<Flight> cityFrom() {
         try {
-            List<Flight> cityListFrom = flight.getFlights().stream()
+            List<Flight> cityListFrom = flightList.getFlights().stream()
                     .filter(x -> x.getFlightFrom().equals("WAW"))
                     .collect(Collectors.toList());
             System.out.println(cityListFrom);

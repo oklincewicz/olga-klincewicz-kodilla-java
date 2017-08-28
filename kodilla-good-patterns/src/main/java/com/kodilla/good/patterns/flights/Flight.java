@@ -28,16 +28,7 @@ public class Flight {
         this.flightTo = flightTo;
     }
 
-    public List<Flight> getFlights() {
-        List<Flight> flights = new ArrayList<>();
-        flights.add(new Flight("KRK", "WAW"));
-        flights.add(new Flight("WAW", "AMS"));
-        flights.add(new Flight("AMS", "JFK"));
-        flights.add(new Flight("GDN", "WAW"));
-        flights.add(new Flight("WAW", "BRU"));
-        flights.add(new Flight("AMS", "SYD"));
-        return new ArrayList<>(flights);
-    }
+
 
     @Override
     public boolean equals(Object o) {
