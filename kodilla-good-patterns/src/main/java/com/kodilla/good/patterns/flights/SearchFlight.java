@@ -10,6 +10,7 @@ import java.util.stream.Collectors;
 public class SearchFlight {
 
     public void cityFrom() {
+        System.out.println("Flights from Warsaw...");
         try {
             FlightList flightList = new FlightList();
             flightList.getFlights().stream()
@@ -18,10 +19,11 @@ public class SearchFlight {
         } catch (NullPointerException e) {
             System.out.println("There are no flights from a given city");
         }
-        System.out.println("Search completed");
+        System.out.println("...Search completed");
     }
 
     public void cityTo() {
+        System.out.println("Flights to Warsaw...");
         try {
             FlightList flightList = new FlightList();
             flightList.getFlights().stream()
@@ -30,10 +32,11 @@ public class SearchFlight {
         } catch (NullPointerException e) {
             System.out.println("There are no flights from a given city");
         }
-        System.out.println("Search completed");
+        System.out.println("...Search completed");
     }
 
     public void cityConnection() {
+        System.out.println("Flights with connection in Warsaw...");
         try {
             FlightList flightList = new FlightList();
             List<Flight> theResultFlights = flightList.getFlights().stream()
@@ -45,7 +48,7 @@ public class SearchFlight {
         } catch (NullPointerException e) {
             System.out.println("There are no flights from a given city");
         }
-        System.out.println("Search completed");
+        System.out.println("...Search completed");
     }
 
 }
