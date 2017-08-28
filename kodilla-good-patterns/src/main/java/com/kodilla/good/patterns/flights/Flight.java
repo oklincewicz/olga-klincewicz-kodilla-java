@@ -28,8 +28,6 @@ public class Flight {
         this.flightTo = flightTo;
     }
 
-
-
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
