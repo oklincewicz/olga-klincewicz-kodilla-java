@@ -2,10 +2,11 @@ package com.kodilla.good.patterns.food2door;
 
 public class ExtraFoodShop extends Supplier {
 
-
     @Override
     public void process() {
         checkStockStatus();
+        isOrderSucceed();
+        informacionAboutDelivery();
     }
 
     @Override

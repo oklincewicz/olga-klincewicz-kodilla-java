@@ -4,6 +4,8 @@ public class GlutenFreeShop extends Supplier {
     @Override
     public void process() {
         saveUserNameOnMailingList();
+        isOrderSucceed();
+        informacionAboutDelivery();
     }
 
     @Override

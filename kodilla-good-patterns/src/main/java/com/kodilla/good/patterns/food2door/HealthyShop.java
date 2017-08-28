@@ -6,6 +6,8 @@ public class HealthyShop extends Supplier {
     @Override
     public void process() {
         sendEmailToUserWithBon();
+        isOrderSucceed();
+        informacionAboutDelivery();
     }
 
     @Override
