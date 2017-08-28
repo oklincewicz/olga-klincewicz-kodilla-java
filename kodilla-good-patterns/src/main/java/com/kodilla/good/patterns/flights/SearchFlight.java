@@ -50,9 +50,11 @@ public class SearchFlight {
 
                 for(int i = 0; i < theResultFlightsTo.size(); i++) {
                     Flight resultTo = theResultFlightsTo.get(i);
-                    for (int n = 0; n<theResultFlightsFrom.size(); n++) {
+                    for (int n = 0; n < theResultFlightsFrom.size(); n++) {
                         Flight resultFrom = theResultFlightsFrom.get(n);
-                        System.out.println(resultTo + " - " + resultFrom);
+                        if (resultTo.getFlightFrom() != resultFrom.getFlightTo()) {
+                            System.out.println(resultTo + " - " + resultFrom);
+                        }
                     }
                 }
 
