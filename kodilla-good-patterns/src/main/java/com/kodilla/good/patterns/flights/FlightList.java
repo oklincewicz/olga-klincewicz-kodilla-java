@@ -22,5 +22,4 @@ public final class FlightList {
     public List<Flight> getFlights() {
         return new ArrayList<>(flights);
     }
-
 }

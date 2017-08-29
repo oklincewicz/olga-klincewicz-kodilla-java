@@ -5,11 +5,10 @@ public class AppToSearchFlight {
     public static void main(String[] args) {
         SearchFlight searchFlight = new SearchFlight("WAW", "AMS");
 
-        searchFlight.cityFrom();
-        searchFlight.cityTo();
-        searchFlight.cityConnection();
-        searchFlight.cityFromToWithConnection();
-
+        searchFlight.fromCity();
+        searchFlight.toCity();
+        searchFlight.fromCityToCity();
+        searchFlight.fromCityToCityWithConnection();
     }
 
 }
