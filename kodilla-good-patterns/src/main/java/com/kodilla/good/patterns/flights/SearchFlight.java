@@ -10,6 +10,7 @@ import java.util.stream.Collectors;
 public class SearchFlight {
 
     private String cityOne = "WAW";
+    private String cityTwo = "AMS";
 
     public void cityFrom() {
         System.out.println("Flights from " + cityOne + " ...");
@@ -57,10 +58,32 @@ public class SearchFlight {
                         }
                     }
                 }
+        } catch (NullPointerException e) {
+            System.out.println("There are no flights from a given city");
+        }
+        System.out.println("...Search completed");
+    }
 
-//            theResultFlights.stream()
-//                    .filter(x -> x.getFlightFrom() != x.getFlightTo())
-//                    .forEach(System.out::println);
+    public void cityFromToWithConnection() {
+        System.out.println("Flights with connection from " + cityOne + " to " + cityTwo + " ...");
+        try {
+            FlightList flightList = new FlightList();
+            List<Flight> theResultFlightsFrom = flightList.getFlights().stream()
+                    .filter(x -> x.getFlightFrom().equals(cityOne))
+                    .collect(Collectors.toList());
+            List<Flight> theResultFlightsTo = flightList.getFlights().stream()
+                    .filter(x -> x.getFlightTo().equals(cityTwo))
+                    .collect(Collectors.toList());
+
+            for(int i = 0; i < theResultFlightsFrom.size(); i++) {
+                Flight resultFrom = theResultFlightsFrom.get(i);
+                for (int n = 0; n < theResultFlightsTo.size(); n++) {
+                    Flight resultTo = theResultFlightsTo.get(n);
+                    if (resultTo.getFlightFrom() == resultFrom.getFlightTo()) {
+                        System.out.println(resultFrom + " - " + resultTo);
+                    }
+                }
+            }
         } catch (NullPointerException e) {
             System.out.println("There are no flights from a given city");
         }

@@ -8,6 +8,7 @@ public class AppToSearchFlight {
         searchFlight.cityFrom();
         searchFlight.cityTo();
         searchFlight.cityConnection();
+        searchFlight.cityFromToWithConnection();
 
     }
 

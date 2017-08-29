@@ -15,6 +15,8 @@ public final class FlightList {
         flights.add(new Flight("WAW", "BRU"));
         flights.add(new Flight("AMS", "SYD"));
         flights.add(new Flight("WAW", "KRK"));
+        flights.add(new Flight("KRK", "AMS"));
+        flights.add(new Flight("BRU", "AMS"));
     }
 
     public List<Flight> getFlights() {
