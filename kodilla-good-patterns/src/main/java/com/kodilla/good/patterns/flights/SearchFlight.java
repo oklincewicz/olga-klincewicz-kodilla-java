@@ -77,7 +77,7 @@ public class SearchFlight {
                 Flight resultFrom = theResultFlightsFrom.get(i);
                 for (int n = 0; n < theResultFlightsTo.size(); n++) {
                     Flight resultTo = theResultFlightsTo.get(n);
-                    if (resultTo.getFlightFrom() == resultFrom.getFlightTo()) {
+                    if (resultTo.getFlightFrom().equals(resultFrom.getFlightTo())) {
                         System.out.println(resultFrom + " - " + resultTo);
                     }
                 }
