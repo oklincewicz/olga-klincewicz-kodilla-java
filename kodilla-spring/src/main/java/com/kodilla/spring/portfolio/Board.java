@@ -21,7 +21,7 @@ public final class Board {
 
     public TaskList getInProgressList() {
         return inProgressList;
-    }
+}
 
     public TaskList getDoneList() {
         return doneList;
