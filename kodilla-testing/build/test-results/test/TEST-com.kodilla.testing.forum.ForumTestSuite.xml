@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.kodilla.testing.forum.ForumTestSuite" tests="2" skipped="0" failures="0" errors="0" timestamp="2017-09-10T15:24:29" hostname="HP-ProBook-6360b" time="0.001">
+  <properties/>
+  <testcase name="testCaseRealName" classname="com.kodilla.testing.forum.ForumTestSuite" time="0.001"/>
+  <testcase name="testCaseUserName" classname="com.kodilla.testing.forum.ForumTestSuite" time="0.0"/>
+  <system-out><![CDATA[Test Suite: begin
+Test Case: begin
+Test Case: end
+Test Case: begin
+Test Case: end
+Test Suite: end
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

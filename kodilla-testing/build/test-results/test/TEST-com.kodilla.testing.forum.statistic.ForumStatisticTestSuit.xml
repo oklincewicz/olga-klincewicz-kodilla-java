@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.kodilla.testing.forum.statistic.ForumStatisticTestSuit" tests="7" skipped="0" failures="0" errors="0" timestamp="2017-09-10T15:24:29" hostname="HP-ProBook-6360b" time="0.012">
+  <properties/>
+  <testcase name="numberOfCommentsMoreThenNumberOfPosts" classname="com.kodilla.testing.forum.statistic.ForumStatisticTestSuit" time="0.005"/>
+  <testcase name="testNumberOfPosts1000" classname="com.kodilla.testing.forum.statistic.ForumStatisticTestSuit" time="0.001"/>
+  <testcase name="numberOfCommentsLessThenNumberOfPosts" classname="com.kodilla.testing.forum.statistic.ForumStatisticTestSuit" time="0.0"/>
+  <testcase name="testNumberOfCommentZero" classname="com.kodilla.testing.forum.statistic.ForumStatisticTestSuit" time="0.001"/>
+  <testcase name="testNumberOfPostZero" classname="com.kodilla.testing.forum.statistic.ForumStatisticTestSuit" time="0.001"/>
+  <testcase name="numberOfUserZero" classname="com.kodilla.testing.forum.statistic.ForumStatisticTestSuit" time="0.001"/>
+  <testcase name="numberOfUsers100" classname="com.kodilla.testing.forum.statistic.ForumStatisticTestSuit" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
