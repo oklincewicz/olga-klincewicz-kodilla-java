@@ -52,5 +52,7 @@ public class UserTestSuite {
 
         //Then
         Assert.assertEquals("use Twetter", olaUse);
+        Assert.assertEquals("use Twitter", norbertUse);
+        Assert.assertEquals("use Snapchat", melaniaUse);
     }
 }
