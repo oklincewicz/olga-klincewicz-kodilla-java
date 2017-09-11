@@ -44,6 +44,13 @@ public class UserTestSuite {
         ola.sharePost(new TwitterPublisher());
         olaUse = ola.predict();
         System.out.printf(" Ola must " + olaUse);
+        String norbertUse = norbert.predict();
+        System.out.println(" Norbert " + norbertUse);
+        String melaniaUse = melania.predict();
+        System.out.println("Melania " + melaniaUse);
         System.out.println(" Ended testIndividualSharingStrategy........");
+
+        //Then
+        Assert.assertEquals("use Twetter", olaUse);
     }
 }
