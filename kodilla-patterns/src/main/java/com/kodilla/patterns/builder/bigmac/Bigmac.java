@@ -13,7 +13,7 @@ public final class Bigmac {
         private String roll;
         private int burgers;
         private String sauce;
-        private List<String> ingredient = new ArrayList<>();
+        private List<String> ingredients = new ArrayList<>();
 
         public BigmacBuilder setRoll(String roll) {
             this.roll = roll;
@@ -29,15 +29,15 @@ public final class Bigmac {
             this.sauce = sauce;
             return this;
         }
-//
-//        public BigmacBuilder setIngredient(String ingredient) {
-//            ingredients.add(ingredient);
-//            return this;
-//        }
-//
-//        public Bigmac build() {
-//            return new Bigmac(roll, burgers, sauce, ingredients);
-//        }
+
+        public BigmacBuilder setIngredients(String ingredient) {
+            ingredients.add(ingredient);
+            return this;
+        }
+
+        public Bigmac build() {
+            return new Bigmac(roll, burgers, sauce, ingredients);
+        }
     }
 
 
