@@ -1,6 +1,7 @@
 package com.kodilla.hibernate.task.dao;
 
 import com.kodilla.hibernate.task.Task;
+import org.junit.After;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -16,6 +17,11 @@ public class TaskDaoTestSuite {
     @Autowired
     private TaskDao taskDao;
     private static final String DESCRIPTION = "Test: Learn Hibernate";
+
+    @After
+    public void testCleanAfterTests() {
+        taskDao.deleteAll();
+    }
 
     @Test
     public void testTaskDaoSave() {
@@ -45,10 +51,9 @@ public class TaskDaoTestSuite {
         List<Task> readTasks = taskDao.findByDuration(duration);
 
         //Then
-        Assert.assertEquals(16, readTasks.size());
+        Assert.assertEquals(1, readTasks.size());
 
         //CleanUp
-        int id = readTasks.get(0).getId();
-        taskDao.delete(id);
+        taskDao.deleteAll();
     }
 }
