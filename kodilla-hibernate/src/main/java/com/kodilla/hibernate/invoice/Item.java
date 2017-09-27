@@ -64,7 +64,7 @@ public class Item {
         this.quantity = quantity;
     }
 
-    @NotNull
+
     @Column(name = "VALUE")
     public BigDecimal getValue() {
         return value;

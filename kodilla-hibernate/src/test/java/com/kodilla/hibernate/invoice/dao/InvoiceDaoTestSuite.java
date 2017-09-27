@@ -16,9 +16,11 @@ import java.math.BigDecimal;
 @SpringBootTest
 public class InvoiceDaoTestSuite {
     @Autowired
-    private InvoiceDao invoiceDao;
-    @Autowired
     private ProductDao productDao;
+    @Autowired
+    private InvoiceDao invoiceDao;
+//    @Autowired
+//    private ItemDao itemDao;
 
     @Test
     public void testInvoiceDaoSave() {
@@ -30,9 +32,13 @@ public class InvoiceDaoTestSuite {
 
         Product product = new Product("Spoon");
 
-        product.getItems().add(item1);
-        product.getItems().add(item2);
-        product.getItems().add(item3);
+        item1.setProduct(product);
+        item2.setProduct(product);
+        item3.setProduct(product);
+
+//        product.getItems().add(item1);
+//        product.getItems().add(item2);
+//        product.getItems().add(item3);
 
         Invoice invoice = new Invoice("F_12/2017");
 
@@ -41,18 +47,21 @@ public class InvoiceDaoTestSuite {
         invoice.getItems().add(item3);
 
         //When
+//        productDao.save(product);
         invoiceDao.save(invoice);
-        productDao.save(product);
+//        int idProduct = product.getId();
         int idInvoice = invoice.getId();
-        int idProduct = product.getId();
 
         //Then
-        Assert.assertNotEquals(0, idInvoice);
-        Assert.assertNotEquals(0, idProduct);
+//      Assert.assertNotEquals(0, idProduct);
+//      Assert.assertNotEquals(0, idInvoice);
+//
 
         //CleanUp
+//
+//        productDao.delete(idProduct);
+//        invoiceDao.delete(idInvoice);
 
-        invoiceDao.deleteAll();
 
     }
 }
