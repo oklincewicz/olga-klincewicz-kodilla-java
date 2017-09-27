@@ -6,9 +6,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-//@NamedQuery(
-//        name =
-//)
+@NamedQuery(
+        name = "Employee.retrieveEmployeeWithLastName",
+        query = "FROM Emplyee WHERE lastname = :LASTNAME"
+)
 
 @Entity
 @Table(name = "EMPLOYEES")
