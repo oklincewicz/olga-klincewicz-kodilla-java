@@ -34,7 +34,7 @@ public class Invoice {
     }
 
     @NotNull
-    @Column(name = "INVOICE_NAME")
+    @Column(name = "INVOICE_NUMBER")
     public String getNumber() {
         return number;
     }
@@ -45,7 +45,7 @@ public class Invoice {
 
     @OneToMany(
             mappedBy = "invoice",
-            cascade = {CascadeType.MERGE, CascadeType.PERSIST},
+            cascade = CascadeType.ALL,
             fetch = FetchType.LAZY
     )
     public List<Item> getItems() {

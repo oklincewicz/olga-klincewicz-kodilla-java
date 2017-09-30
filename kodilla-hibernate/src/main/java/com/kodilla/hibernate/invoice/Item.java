@@ -10,16 +10,17 @@ public class Item {
     private int id;
     private BigDecimal price;
     private int quantity;
-//    private BigDecimal value;
+    private BigDecimal value;
     private Product product;
     private Invoice invoice;
 
     public Item() {
     }
 
-    public Item(BigDecimal price, int quantity) {
+    public Item(BigDecimal price, int quantity, BigDecimal value) {
         this.price = price;
         this.quantity = quantity;
+        this.value = value;
     }
 
     @Id
@@ -65,14 +66,15 @@ public class Item {
     }
 
 
-//    @Column(name = "VALUE")
-//    public BigDecimal getValue() {
-//        return value;
-//    }
-//
-//    public void setValue(BigDecimal value) {
-//        this.value = value;
-//    }
+    @NotNull
+    @Column(name = "VALUE")
+    public BigDecimal getValue() {
+        return value;
+    }
+
+    public void setValue(BigDecimal value) {
+        this.value = value;
+    }
 
     @ManyToOne
     @JoinColumn(name = "INVOICE_ID")

@@ -43,7 +43,7 @@ public class Product {
 
     @OneToMany(
             mappedBy = "product",
-            cascade = {CascadeType.MERGE, CascadeType.PERSIST},
+            cascade = CascadeType.ALL,
             fetch = FetchType.LAZY
     )
     public List<Item> getItems() {
