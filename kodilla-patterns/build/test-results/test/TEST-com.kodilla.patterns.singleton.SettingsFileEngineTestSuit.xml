@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.kodilla.patterns.singleton.SettingsFileEngineTestSuit" tests="3" skipped="0" failures="0" errors="0" timestamp="2017-09-19T19:12:07" hostname="DESKTOP-771MS92" time="0.016">
+<testsuite name="com.kodilla.patterns.singleton.SettingsFileEngineTestSuit" tests="3" skipped="0" failures="0" errors="0" timestamp="2017-11-10T12:45:55" hostname="DESKTOP-771MS92" time="0.0">
   <properties/>
   <testcase name="testSaveSettings" classname="com.kodilla.patterns.singleton.SettingsFileEngineTestSuit" time="0.0"/>
   <testcase name="testLoadSettings" classname="com.kodilla.patterns.singleton.SettingsFileEngineTestSuit" time="0.0"/>
-  <testcase name="testGetFileName" classname="com.kodilla.patterns.singleton.SettingsFileEngineTestSuit" time="0.016"/>
+  <testcase name="testGetFileName" classname="com.kodilla.patterns.singleton.SettingsFileEngineTestSuit" time="0.0"/>
   <system-out><![CDATA[Opening the settings file
 Saving settings to file
 Loading settings from file

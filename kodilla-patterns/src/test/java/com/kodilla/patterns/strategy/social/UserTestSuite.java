@@ -51,7 +51,7 @@ public class UserTestSuite {
         System.out.println(" Ended testIndividualSharingStrategy........");
 
         //Then
-        Assert.assertEquals("use Twetter", olaUse);
+        Assert.assertEquals("use Twitter", olaUse);
         Assert.assertEquals("use Twitter", norbertUse);
         Assert.assertEquals("use Snapchat", melaniaUse);
     }
