@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.kodilla.stream.book.BookTestSuite" tests="3" skipped="0" failures="0" errors="0" timestamp="2017-09-10T15:42:37" hostname="HP-ProBook-6360b" time="0.109">
+<testsuite name="com.kodilla.stream.book.BookTestSuite" tests="3" skipped="0" failures="0" errors="0" timestamp="2017-11-10T12:49:00" hostname="DESKTOP-771MS92" time="0.015">
   <properties/>
-  <testcase name="testGetListUsingFor" classname="com.kodilla.stream.book.BookTestSuite" time="0.001"/>
-  <testcase name="testGetListUsingIntStreamSum" classname="com.kodilla.stream.book.BookTestSuite" time="0.105"/>
-  <testcase name="testGetListUsingIntStreamCount" classname="com.kodilla.stream.book.BookTestSuite" time="0.003"/>
+  <testcase name="testGetListUsingFor" classname="com.kodilla.stream.book.BookTestSuite" time="0.0"/>
+  <testcase name="testGetListUsingIntStreamSum" classname="com.kodilla.stream.book.BookTestSuite" time="0.0"/>
+  <testcase name="testGetListUsingIntStreamCount" classname="com.kodilla.stream.book.BookTestSuite" time="0.015"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

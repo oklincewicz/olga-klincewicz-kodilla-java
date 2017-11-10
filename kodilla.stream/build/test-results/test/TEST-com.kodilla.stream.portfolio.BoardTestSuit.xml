@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.kodilla.stream.portfolio.BoardTestSuit" tests="6" skipped="0" failures="2" errors="0" timestamp="2017-09-10T15:42:37" hostname="HP-ProBook-6360b" time="0.156">
+<testsuite name="com.kodilla.stream.portfolio.BoardTestSuit" tests="6" skipped="0" failures="2" errors="0" timestamp="2017-11-10T12:49:00" hostname="DESKTOP-771MS92" time="0.094">
   <properties/>
-  <testcase name="testAddTaskList" classname="com.kodilla.stream.portfolio.BoardTestSuit" time="0.047"/>
-  <testcase name="testAddTaskListAverageWorkingOnTask" classname="com.kodilla.stream.portfolio.BoardTestSuit" time="0.074"/>
-  <testcase name="testAddTaskListFindUsersTasks" classname="com.kodilla.stream.portfolio.BoardTestSuit" time="0.004"/>
-  <testcase name="testAddTaskListFindLongTasks" classname="com.kodilla.stream.portfolio.BoardTestSuit" time="0.02">
+  <testcase name="testAddTaskList" classname="com.kodilla.stream.portfolio.BoardTestSuit" time="0.031"/>
+  <testcase name="testAddTaskListAverageWorkingOnTask" classname="com.kodilla.stream.portfolio.BoardTestSuit" time="0.016"/>
+  <testcase name="testAddTaskListFindUsersTasks" classname="com.kodilla.stream.portfolio.BoardTestSuit" time="0.0"/>
+  <testcase name="testAddTaskListFindLongTasks" classname="com.kodilla.stream.portfolio.BoardTestSuit" time="0.015">
     <failure message="java.lang.AssertionError: expected:&lt;2&gt; but was:&lt;0&gt;" type="java.lang.AssertionError">java.lang.AssertionError: expected:&lt;2&gt; but was:&lt;0&gt;
 	at org.junit.Assert.fail(Assert.java:88)
 	at org.junit.Assert.failNotEquals(Assert.java:834)
@@ -58,7 +58,7 @@
 	at java.lang.Thread.run(Thread.java:748)
 </failure>
   </testcase>
-  <testcase name="testAddTaskListFindOutdatedTasks" classname="com.kodilla.stream.portfolio.BoardTestSuit" time="0.001">
+  <testcase name="testAddTaskListFindOutdatedTasks" classname="com.kodilla.stream.portfolio.BoardTestSuit" time="0.0">
     <failure message="java.lang.AssertionError: expected:&lt;1&gt; but was:&lt;0&gt;" type="java.lang.AssertionError">java.lang.AssertionError: expected:&lt;1&gt; but was:&lt;0&gt;
 	at org.junit.Assert.fail(Assert.java:88)
 	at org.junit.Assert.failNotEquals(Assert.java:834)
@@ -112,7 +112,7 @@
 	at java.lang.Thread.run(Thread.java:748)
 </failure>
   </testcase>
-  <testcase name="testAddTaskListAverageWorkingOnTaskWithSumAndCount" classname="com.kodilla.stream.portfolio.BoardTestSuit" time="0.006"/>
+  <testcase name="testAddTaskListAverageWorkingOnTaskWithSumAndCount" classname="com.kodilla.stream.portfolio.BoardTestSuit" time="0.016"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

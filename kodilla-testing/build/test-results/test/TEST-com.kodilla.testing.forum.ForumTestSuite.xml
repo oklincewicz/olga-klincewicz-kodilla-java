@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.kodilla.testing.forum.ForumTestSuite" tests="2" skipped="0" failures="0" errors="0" timestamp="2017-09-10T15:24:29" hostname="HP-ProBook-6360b" time="0.001">
+<testsuite name="com.kodilla.testing.forum.ForumTestSuite" tests="2" skipped="0" failures="0" errors="0" timestamp="2017-11-10T12:48:57" hostname="DESKTOP-771MS92" time="0.0">
   <properties/>
-  <testcase name="testCaseRealName" classname="com.kodilla.testing.forum.ForumTestSuite" time="0.001"/>
+  <testcase name="testCaseRealName" classname="com.kodilla.testing.forum.ForumTestSuite" time="0.0"/>
   <testcase name="testCaseUserName" classname="com.kodilla.testing.forum.ForumTestSuite" time="0.0"/>
   <system-out><![CDATA[Test Suite: begin
 Test Case: begin
