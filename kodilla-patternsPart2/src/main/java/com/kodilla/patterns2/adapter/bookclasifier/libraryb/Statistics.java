@@ -12,13 +12,6 @@ public class Statistics implements BookStatistics {
         if (books.size() == 0) return 0;
 
         return (int)books.entrySet().stream().mapToInt(x -> x.getValue().getYearOfPublication()).average().orElse(0);
-
-
-//        int sum = 0;
-//        for (Map.Entry<BookSignature, NewBook> entry : books.entrySet()) {
-//            sum += entry.getValue().getYearOfPublication();
-//        }
-//        return sum / books.size();
     }
 
     @Override
@@ -38,16 +31,3 @@ public class Statistics implements BookStatistics {
         return (bookList.get(size / 2)+bookList.get(size / 2 - 1)) /2;
     }
 }
-
-//        int[] years = new int[books.size()];
-//        int n = 0;
-//        for (Map.Entry<BookSignature, NewBook> entry : books.entrySet()) {
-//            years[n] = entry.getValue().getYearOfPublication();
-//            n++;
-//        }
-//        Arrays.sort(years);
-//        if (years.length % 2 == 0) {
-//            return years[(int)(years.length / 2 + 0.5)];
-//        } else {
-//            return years[years.length / 2];
-//        }
