@@ -1,16 +1,13 @@
 package com.kodilla.patterns2.adapter.bookclasifier.libraryb;
 
-import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
-import java.util.stream.Collector;
 import java.util.stream.Collectors;
 
 public class Statistics implements BookStatistics {
     @Override
     public int averagePublicationYear(Map<BookSignature, NewBook> books) {
         if (books.size() == 0) return 0;
-
         return (int)books.entrySet().stream().mapToInt(x -> x.getValue().getYearOfPublication()).average().orElse(0);
     }
 
