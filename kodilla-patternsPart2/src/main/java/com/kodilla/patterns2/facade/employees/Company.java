@@ -5,11 +5,10 @@ import javax.validation.constraints.NotNull;
 import java.util.ArrayList;
 import java.util.List;
 
-@NamedNativeQuery(
+@NamedQuery(
         name = "Company.retrieveCompanyByFragmenName",
         query = "SELECT * FROM COMPANIES " +
-                "WHERE COMPANY_NAME LIKE :%fragmentOfCompanyName%",
-        resultClass = Company.class
+                "WHERE COMPANY_NAME LIKE :%fragmentOfCompanyName%"
 )
 
 @Entity

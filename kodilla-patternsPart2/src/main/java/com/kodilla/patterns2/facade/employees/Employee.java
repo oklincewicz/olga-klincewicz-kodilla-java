@@ -6,11 +6,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-@NamedNativeQuery(
+@NamedQuery(
         name = "Emplyee.retrieveEmplyeeByFragmenLastName",
-        query = "SELECT * FROM EMPLOYEES " +
-                "WHERE LASTNAME LIKE :%fragmentOfEmplyeeLastName%",
-        resultClass = Employee.class
+        query = "SELECT e FROM Employee e " +
+                "WHERE e.LASTNAME LIKE :fragmentOfEmplyeeLastName"
 )
 
 @Entity
