@@ -7,9 +7,8 @@ import java.util.List;
 
 
 @NamedQuery(
-        name = "Emplyee.retrieveEmplyeeByFragmenLastName",
-        query = "SELECT e FROM Employee e " +
-                "WHERE e.LASTNAME LIKE :fragmentOfEmplyeeLastName"
+        name = "Employee.searchEmployeeByLastname",
+        query = "FROM Employee WHERE lastname LIKE :fragmentOfEmplyeeLastName"
 )
 
 @Entity

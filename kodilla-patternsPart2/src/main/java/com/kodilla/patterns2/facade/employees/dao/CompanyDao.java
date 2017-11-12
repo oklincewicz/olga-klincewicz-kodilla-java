@@ -12,5 +12,5 @@ import java.util.List;
 @Repository
 public interface CompanyDao extends CrudRepository<Company, Integer> {
     @Query
-    List<Company> retrieveCompanyByFragmenName(@Param("fragmentOfCompanyName") String name);
+    List<Company> searchCompanyByName(@Param("fragmentOfCompanyName") String name);
 }

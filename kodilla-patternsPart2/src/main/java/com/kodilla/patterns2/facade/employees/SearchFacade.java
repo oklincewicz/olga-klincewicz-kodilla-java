@@ -15,9 +15,10 @@ public class SearchFacade {
     CompanyDao companyDao;
 
     public List<Employee> findEmployees(String fragmentOfEmplyeeLastName) {
-       return employeeDao.retrieveEmplyeeByFragmenLastName("%" + fragmentOfEmplyeeLastName + "%");
+       return employeeDao.searchEmployeeByLastname("%" + fragmentOfEmplyeeLastName + "%");
     }
 
-    //
-
+    public List<Company> findCompany(String fragmentOfCompanyName) {
+        return companyDao.searchCompanyByName("%" + fragmentOfCompanyName + "%");
+    }
 }

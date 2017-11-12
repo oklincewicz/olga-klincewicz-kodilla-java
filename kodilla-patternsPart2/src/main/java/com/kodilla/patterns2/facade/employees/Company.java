@@ -6,9 +6,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 @NamedQuery(
-        name = "Company.retrieveCompanyByFragmenName",
-        query = "SELECT * FROM COMPANIES " +
-                "WHERE COMPANY_NAME LIKE :%fragmentOfCompanyName%"
+        name = "Company.searchCompanyByName",
+        query = "FROM Company WHERE name LIKE :fragmentOfCompanyName"
 )
 
 @Entity
@@ -17,7 +16,6 @@ public class Company {
     private int id;
     private String name;
     private List<Employee> employees = new ArrayList<>();
-    private String fragmentOfCompanyName;
 
     public Company() {
     }
@@ -55,13 +53,5 @@ public class Company {
 
     public void setName(String name) {
         this.name = name;
-    }
-
-    public String getFragmentOfCompanyName() {
-        return fragmentOfCompanyName;
-    }
-
-    public void setFragmentOfCompanyName(String fragmentOfCompanyName) {
-        this.fragmentOfCompanyName = fragmentOfCompanyName;
     }
 }
