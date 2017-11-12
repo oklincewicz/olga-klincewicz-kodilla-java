@@ -35,7 +35,7 @@ public class Statistics implements BookStatistics {
     }
 
     private int getAverage(List<Integer> bookList, int size) {
-        return (bookList.get(size / 2)+bookList.get(size / 2 + 1)) /2;
+        return (bookList.get(size / 2)+bookList.get(size / 2 - 1)) /2;
     }
 }
 
