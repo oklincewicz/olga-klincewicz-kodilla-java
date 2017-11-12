@@ -11,11 +11,6 @@ import org.springframework.stereotype.Component;
 public class WatcherOrder {
     private static final Logger LOGGER = LoggerFactory.getLogger(WatcherOrder.class);
 
-//    @Before("execution(* com.kodilla.patterns2.facade.api.OrderFacade.processOrder(..))")
-//    public void logEvent() {
-//        LOGGER.info("Method was started in Class: " );
-//    }
-
     @Before("execution(* com.kodilla.patterns2.facade.api.OrderFacade.processOrder(..))" + "&& args(order, userId) && this(object)")
     public void logEvent(OrderDto order, Long userId, Object object) {
         LOGGER.info("Method was started in Class: " + object.getClass().getName() + ", In order nr: " + order + ", By userId: " + userId );
