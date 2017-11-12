@@ -10,11 +10,15 @@ public class Statistics implements BookStatistics {
     @Override
     public int averagePublicationYear(Map<BookSignature, NewBook> books) {
         if (books.size() == 0) return 0;
-        int sum = 0;
-        for (Map.Entry<BookSignature, NewBook> entry : books.entrySet()) {
-            sum += entry.getValue().getYearOfPublication();
-        }
+
+        int sum = books.entrySet().stream().mapToInt(x -> x.getValue().getYearOfPublication()).sum();
         return sum / books.size();
+
+//        int sum = 0;
+//        for (Map.Entry<BookSignature, NewBook> entry : books.entrySet()) {
+//            sum += entry.getValue().getYearOfPublication();
+//        }
+//        return sum / books.size();
     }
 
     @Override
@@ -31,7 +35,7 @@ public class Statistics implements BookStatistics {
     }
 
     private int getAverage(List<Integer> bookList, int size) {
-        return (bookList.get(size / 2)+bookList.get(size / 2 - 1)) /2;
+        return (bookList.get(size / 2)+bookList.get(size / 2 + 1)) /2;
     }
 }
 
