@@ -20,15 +20,15 @@ public class FacebookTestingApp {
 
         WebElement selectDay = driver.findElement(By.xpath(XPATH_DAY));
         Select selectDayCombo = new Select(selectDay);
-        selectDayCombo.selectByValue("7");
+        selectDayCombo.selectByValue("13");
 
         WebElement selectMonth = driver.findElement(By.xpath(XPATH_MONTH));
         Select selectMonthCombo = new Select(selectMonth);
-        selectMonthCombo.selectByValue("9");
+        selectMonthCombo.selectByValue("10");
 
         WebElement selectYear = driver.findElement(By.xpath(XPATH_YEAR));
         Select selectYearCombo = new Select(selectYear);
-        selectYearCombo.selectByValue("1986");
+        selectYearCombo.selectByValue("1985");
 
 
     }
